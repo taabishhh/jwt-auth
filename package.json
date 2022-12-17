@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/index.js",
-    "build": "cd client && npm install && npm run build",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && node server/index.js",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && cd client && npm install && npm run build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
