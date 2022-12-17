@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "build": "cd client && npm install && npm run build"
+    "build": "cd client && npm install && npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
   },
   "engines": {
     "node": "16.15.1",
